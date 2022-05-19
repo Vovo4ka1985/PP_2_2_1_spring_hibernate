@@ -13,10 +13,10 @@ public class Car {
     private Long id;
     private String model;
     private int series;
-   // @OneToOne
-   // @JoinColumn(name = "user_id", referencedColumnName = "id")
-   @OneToOne(mappedBy = "car", cascade = CascadeType.ALL) //optional = false,
-    private  User user;
+    // @OneToOne
+    // @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL) //optional = false,
+    private User user;
 
     public Car(String model, int series) {
         this.model = model;
@@ -57,6 +57,16 @@ public class Car {
     }
 
     public Car() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", series=" + series +
+                ", model='" + model + '\'' +
+                '}';
 
     }
 }

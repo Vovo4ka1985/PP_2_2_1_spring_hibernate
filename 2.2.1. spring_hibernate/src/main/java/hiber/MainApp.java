@@ -33,6 +33,11 @@ public class MainApp {
       user3.setCar(car2);
       user4.setCar(car3);
 
+      userService.add(user1);
+      userService.add(user2);
+      userService.add(user3);
+      userService.add(user4);
+
       List<User> users = userService.listUsers();
       for (User user : users) {
          System.out.println("Id = " + user.getId());
